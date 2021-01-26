@@ -50,8 +50,8 @@ hs_err_pid*
 # Xcode
 xcuserdata/
 
-# Xcode config
-Config.plist
+# Xcode settings
+Settings.plist
 
 # Swift Package Manager
 Package.resolved
