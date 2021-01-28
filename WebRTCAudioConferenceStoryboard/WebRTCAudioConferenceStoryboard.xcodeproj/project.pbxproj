@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		886C1E1F25BF74E700DADFE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886C1E1D25BF74E700DADFE5 /* LaunchScreen.storyboard */; };
 		886C1E2825C07DF400DADFE5 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886C1E2725C07DF400DADFE5 /* Config.plist */; };
 		886C1E2B25C07E9F00DADFE5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E2A25C07E9F00DADFE5 /* Configuration.swift */; };
+		886C1E3025C1E95300DADFE5 /* BandwidthWebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 886C1E2F25C1E95300DADFE5 /* BandwidthWebRTC */; };
+		886C1E3325C1EB0A00DADFE5 /* JoinCallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */; };
+		886C1E3725C1EBD300DADFE5 /* JoinCallRequestCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */; };
+		886C1E3A25C1EF7300DADFE5 /* JoinCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,9 @@
 		886C1E2025BF74E700DADFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886C1E2725C07DF400DADFE5 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		886C1E2A25C07E9F00DADFE5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallRequest.swift; sourceTree = "<group>"; };
+		886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallRequestCaller.swift; sourceTree = "<group>"; };
+		886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886C1E3025C1E95300DADFE5 /* BandwidthWebRTC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +68,9 @@
 		886C1E1125BF74E300DADFE5 /* WebRTCAudioConferenceStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */,
+				886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */,
+				886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */,
 				886C1E2A25C07E9F00DADFE5 /* Configuration.swift */,
 				886C1E1225BF74E300DADFE5 /* AppDelegate.swift */,
 				886C1E1425BF74E300DADFE5 /* SceneDelegate.swift */,
@@ -89,6 +100,9 @@
 			dependencies = (
 			);
 			name = WebRTCAudioConferenceStoryboard;
+			packageProductDependencies = (
+				886C1E2F25C1E95300DADFE5 /* BandwidthWebRTC */,
+			);
 			productName = WebRTCAudioConferenceStoryboard;
 			productReference = 886C1E0F25BF74E300DADFE5 /* WebRTCAudioConferenceStoryboard.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 886C1E0625BF74E300DADFE5;
+			packageReferences = (
+				886C1E2E25C1E95300DADFE5 /* XCRemoteSwiftPackageReference "webrtc-swift" */,
+			);
 			productRefGroup = 886C1E1025BF74E300DADFE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886C1E3325C1EB0A00DADFE5 /* JoinCallRequest.swift in Sources */,
 				886C1E1725BF74E300DADFE5 /* ViewController.swift in Sources */,
 				886C1E1325BF74E300DADFE5 /* AppDelegate.swift in Sources */,
+				886C1E3A25C1EF7300DADFE5 /* JoinCallResponse.swift in Sources */,
 				886C1E2B25C07E9F00DADFE5 /* Configuration.swift in Sources */,
+				886C1E3725C1EBD300DADFE5 /* JoinCallRequestCaller.swift in Sources */,
 				886C1E1525BF74E300DADFE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +315,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK6X79F848;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WebRTCAudioConferenceStoryboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +335,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK6X79F848;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WebRTCAudioConferenceStoryboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		886C1E2E25C1E95300DADFE5 /* XCRemoteSwiftPackageReference "webrtc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bandwidth/webrtc-swift.git";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		886C1E2F25C1E95300DADFE5 /* BandwidthWebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 886C1E2E25C1E95300DADFE5 /* XCRemoteSwiftPackageReference "webrtc-swift" */;
+			productName = BandwidthWebRTC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 886C1E0725BF74E300DADFE5 /* Project object */;
 }
