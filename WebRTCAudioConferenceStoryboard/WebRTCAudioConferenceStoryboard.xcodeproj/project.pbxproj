@@ -19,6 +19,8 @@
 		886C1E3325C1EB0A00DADFE5 /* JoinCallRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */; };
 		886C1E3725C1EBD300DADFE5 /* JoinCallRequestCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */; };
 		886C1E3A25C1EF7300DADFE5 /* JoinCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */; };
+		886C1E4125C34B9800DADFE5 /* CallerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */; };
+		886C1E4625C34D4D00DADFE5 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E4525C34D4D00DADFE5 /* Caller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallRequest.swift; sourceTree = "<group>"; };
 		886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallRequestCaller.swift; sourceTree = "<group>"; };
 		886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallResponse.swift; sourceTree = "<group>"; };
+		886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallerTableViewCell.swift; sourceTree = "<group>"; };
+		886C1E4525C34D4D00DADFE5 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		886C1E1125BF74E300DADFE5 /* WebRTCAudioConferenceStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				886C1E4425C34D3800DADFE5 /* Models */,
 				886C1E3225C1EB0A00DADFE5 /* JoinCallRequest.swift */,
 				886C1E3625C1EBD300DADFE5 /* JoinCallRequestCaller.swift */,
 				886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */,
@@ -80,8 +85,17 @@
 				886C1E1D25BF74E700DADFE5 /* LaunchScreen.storyboard */,
 				886C1E2025BF74E700DADFE5 /* Info.plist */,
 				886C1E2725C07DF400DADFE5 /* Config.plist */,
+				886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */,
 			);
 			path = WebRTCAudioConferenceStoryboard;
+			sourceTree = "<group>";
+		};
+		886C1E4425C34D3800DADFE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				886C1E4525C34D4D00DADFE5 /* Caller.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +178,11 @@
 				886C1E3325C1EB0A00DADFE5 /* JoinCallRequest.swift in Sources */,
 				886C1E1725BF74E300DADFE5 /* ViewController.swift in Sources */,
 				886C1E1325BF74E300DADFE5 /* AppDelegate.swift in Sources */,
+				886C1E4125C34B9800DADFE5 /* CallerTableViewCell.swift in Sources */,
 				886C1E3A25C1EF7300DADFE5 /* JoinCallResponse.swift in Sources */,
 				886C1E2B25C07E9F00DADFE5 /* Configuration.swift in Sources */,
 				886C1E3725C1EBD300DADFE5 /* JoinCallRequestCaller.swift in Sources */,
+				886C1E4625C34D4D00DADFE5 /* Caller.swift in Sources */,
 				886C1E1525BF74E300DADFE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
