@@ -16,11 +16,7 @@ class ViewController: UIViewController {
     
     let bandwidth = RTCBandwidth()
 
-    var hasJoined = false {
-        didSet {
-            updateInterface()
-        }
-    }
+    var hasJoined = false
     
     var room: String?
     var name: String?
@@ -65,6 +61,13 @@ class ViewController: UIViewController {
         bandwidth.disconnect()
         
         hasJoined = false
+        
+        room = nil
+        name = nil
+        
+        callers.removeAll()
+        
+        updateInterface()
     }
     
     private func updateInterface() {
