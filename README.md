@@ -1,4 +1,4 @@
-# Repo Title REPLACE
+# WebRTC Audio Conference
 <a href="http://dev.bandwidth.com"><img src="https://s3.amazonaws.com/bwdemos/BW-VMP.png"/></a>
 </div>
 
@@ -6,7 +6,7 @@
 
 <!-- TOC -->
 
-- [Repo Title REPLACE](#repo-title-replace)
+- [WebRTC Audio Conference](#webrtc-audio-conference)
 - [Description](#description)
 - [Bandwidth](#bandwidth)
 - [Environmental Variables](#environmental-variables)
@@ -16,7 +16,7 @@
 <!-- /TOC -->
 
 # Description
-A short description of your sample app and its capabilities.
+This sample allows for iOS devices to create a conference call using WebRTC audio.
 
 # Setup
 
