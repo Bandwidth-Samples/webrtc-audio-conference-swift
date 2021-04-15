@@ -9,12 +9,12 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // global vars
-const port = 3000;
-const accountId = process.env.ACCOUNT_ID;
+const port = process.env.LOCAL_PORT;
+const accountId = process.env.BW_ACCOUNT_ID;
 var rooms_db = new Map();
 
-BandwidthWebRTC.Configuration.basicAuthUserName = process.env.USERNAME;
-BandwidthWebRTC.Configuration.basicAuthPassword = process.env.PASSWORD;
+BandwidthWebRTC.Configuration.basicAuthUserName = process.env.BW_USERNAME;
+BandwidthWebRTC.Configuration.basicAuthPassword = process.env.BW_PASSWORD;
 var webRTCController = BandwidthWebRTC.APIController;
 
 app.post("/joinCall", async (req, res) => {
