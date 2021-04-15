@@ -33,9 +33,9 @@ cp .env.default .env
 Add your Bandwidth account settings to the new configuration file `.env`.
 
 Bandwidth account credentials
-- BW_ACCOUNT_ID
-- BW_USERNAME
-- BW_PASSWORD
+- BW_BW_ACCOUNT_ID
+- BW_BW_USERNAME
+- BW_BW_PASSWORD
 
 Install server dependencies and run.
 
@@ -67,9 +67,9 @@ For more information about API credentials see [here](https://dev.bandwidth.com/
 # Environmental Variables
 The sample app uses the below environmental variables.
 ```sh
-BW_ACCOUNT_ID                 # Your Bandwidth Account Id
-BW_USERNAME                   # Your Bandwidth API Username
-BW_PASSWORD                   # Your Bandwidth API Password
+BW_BW_ACCOUNT_ID                 # Your Bandwidth Account Id
+BW_BW_USERNAME                   # Your Bandwidth API Username
+BW_BW_PASSWORD                   # Your Bandwidth API Password
 ```
 
 ## Ngrok
