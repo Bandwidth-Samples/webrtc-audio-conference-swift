@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // global vars
-const port = 3000;
+const port = process.env.LOCAL_PORT;
 const accountId = process.env.BW_ACCOUNT_ID;
 var rooms_db = new Map();
 
