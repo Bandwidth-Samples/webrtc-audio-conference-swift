@@ -41,16 +41,21 @@ class ViewController: UIViewController {
             }
             
             self.join(room: room, name: name) { token in
-                try? self.bandwidth.connect(using: token) {
-                    self.bandwidth.publish(audio: true, video: false, alias: nil) {
-                        DispatchQueue.main.async {
-                            self.hasJoined = true
-                            
-                            self.room = room
-                            self.name = name
-                            
-                            self.updateInterface()
+                self.bandwidth.connect(using: token) { result in
+                    switch result {
+                    case .success:
+                        self.bandwidth.publish(alias: "sample") { stream in
+                            DispatchQueue.main.async {
+                                self.hasJoined = true
+                                
+                                self.room = room
+                                self.name = name
+                                
+                                self.updateInterface()
+                            }
                         }
+                    case .failure(let error):
+                        print(error.localizedDescription)
                     }
                 }
             }
@@ -132,21 +137,17 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: RTCBandwidthDelegate {
-    func bandwidth(_ bandwidth: RTCBandwidth, streamAvailableAt endpointId: String, participantId: String, alias: String?, mediaTypes: [MediaType], mediaStream: RTCMediaStream?) {
-        print("streamAvailableAt", endpointId, participantId, alias ?? "---")
-        
-        let caller = Caller(endpointId: endpointId, participantId: participantId)
+    func bandwidth(_ bandwidth: RTCBandwidth, streamAvailable stream: RTCStream) {
+        let caller = Caller(endpointId: stream.mediaStream.streamId, participantId: stream.participantId ?? "")
         callers.append(caller)
         
         DispatchQueue.main.async {
             self.updateInterface()
         }
     }
-
-    func bandwidth(_ bandwidth: RTCBandwidth, streamUnavailableAt endpointId: String) {
-        print("streamUnavailableAt", endpointId)
-        
-        guard let index = callers.firstIndex(where: { $0.endpointId == endpointId }) else {
+    
+    func bandwidth(_ bandwidth: RTCBandwidth, streamUnavailable stream: RTCStream) {
+        guard let index = callers.firstIndex(where: { $0.endpointId == stream.mediaStream.streamId }) else {
             return
         }
         

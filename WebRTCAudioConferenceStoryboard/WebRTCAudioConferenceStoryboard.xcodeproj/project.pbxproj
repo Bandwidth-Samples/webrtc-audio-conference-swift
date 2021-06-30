@@ -20,6 +20,7 @@
 		886C1E3A25C1EF7300DADFE5 /* JoinCallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */; };
 		886C1E4125C34B9800DADFE5 /* CallerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */; };
 		886C1E4625C34D4D00DADFE5 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C1E4525C34D4D00DADFE5 /* Caller.swift */; };
+		88B83C8C268CBC43000DB903 /* Config.Template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88B83C8B268CBC43000DB903 /* Config.Template.plist */; };
 		88E42CBE25C9A6830048812B /* BandwidthWebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 88E42CBD25C9A6830048812B /* BandwidthWebRTC */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		886C1E3925C1EF7300DADFE5 /* JoinCallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCallResponse.swift; sourceTree = "<group>"; };
 		886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallerTableViewCell.swift; sourceTree = "<group>"; };
 		886C1E4525C34D4D00DADFE5 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
+		88B83C8B268CBC43000DB903 /* Config.Template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.Template.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				886C1E1D25BF74E700DADFE5 /* LaunchScreen.storyboard */,
 				886C1E2025BF74E700DADFE5 /* Info.plist */,
 				886C1E2725C07DF400DADFE5 /* Config.plist */,
+				88B83C8B268CBC43000DB903 /* Config.Template.plist */,
 				886C1E4025C34B9800DADFE5 /* CallerTableViewCell.swift */,
 			);
 			path = WebRTCAudioConferenceStoryboard;
@@ -163,6 +166,7 @@
 			files = (
 				886C1E1F25BF74E700DADFE5 /* LaunchScreen.storyboard in Resources */,
 				886C1E2825C07DF400DADFE5 /* Config.plist in Resources */,
+				88B83C8C268CBC43000DB903 /* Config.Template.plist in Resources */,
 				886C1E1C25BF74E700DADFE5 /* Assets.xcassets in Resources */,
 				886C1E1A25BF74E300DADFE5 /* Main.storyboard in Resources */,
 			);
@@ -393,8 +397,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Bandwidth/bandwidth-webrtc-swift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				kind = exactVersion;
+				version = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
